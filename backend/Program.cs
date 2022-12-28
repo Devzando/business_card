@@ -1,16 +1,15 @@
 using Microsoft.EntityFrameworkCore;
-using QRCoder;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<BancoDeDados>(
     options => options.UseSqlite("Data Source=BancoDeDados.db")
 );
-var app = builder.Build();
-// var baseurl = "http:///localhost:5033";
 
-// builder.Services.AddScoped( sp => new HttpClient {
-//     BaseAddress = new Uri(baseurl)
-// });
+builder.Services.AddCors(options => options.AddPolicy("corspolicy", build => {
+    build.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader();
+}));
+
+var app = builder.Build();
 
 app.MapGet("/allcolaborador", (BancoDeDados bd) => bd.Colaboradores.ToListAsync());
 app.MapGet("/getcolaborador/{id}", (BancoDeDados bd, int id) =>  bd.Colaboradores.Single(c => c.Id == id));
@@ -21,7 +20,5 @@ app.MapPost("/create", async (Colaborador colaborador, BancoDeDados bd) => {
     return Results.Ok(colaborador); 
 });
 
-
-
-
+app.UseCors("corspolicy");
 app.Run();

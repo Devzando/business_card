@@ -30,7 +30,7 @@ namespace backend.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Url")
+                    b.Property<string>("Telefone")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
