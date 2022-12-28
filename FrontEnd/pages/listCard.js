@@ -3,7 +3,7 @@ import QRCode from 'react-qr-code'
 import router from 'next/router'
 import Head from 'next/head'
 
-import api from '../services/api'
+import {api} from '../services/api'
 
 export default function ListCard() {
   const [users, setUsers] = useState([])
@@ -12,6 +12,7 @@ export default function ListCard() {
     try {
       const response = await api.get('/allcolaborador')
       setUsers(response.data)
+      console.log(response.data)
     } catch (error) {
       console.log(error)
     }
@@ -41,6 +42,11 @@ export default function ListCard() {
                 <li><a class="d-flex justify-content-center" href="/myCard" ><img id="qr-code" src="qrcode.png" alt="QrCode" /></a><h1>Fulaninho de Tal</h1></li>
                 <li><a class="d-flex justify-content-center" href="/myCard" ><img id="qr-code" src="qrcode.png" alt="QrCode" /></a><h1>Ciclano das Trax</h1></li>
             </ul>
+            {users.map(item => (
+              <ul key={item.id} class="list-cards">
+                  <li><a class="d-flex justify-content-center" href="/myCard" ><img id="qr-code" src="qrcode.png" alt="QrCode" /></a><h1>{item.nome}</h1></li>
+              </ul>
+            ))}
         </div>
     </>
   )

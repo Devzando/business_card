@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Head from 'next/head'
 
-import api from "../services/api"
+import {api} from "../services/api"
 
 export default function Index() {
   const [name, setName] = useState('')
@@ -13,7 +13,7 @@ export default function Index() {
       e.preventDefault()
       const data = {nome: name, email: email, cargo: office, telefone: phone}
       try {
-        const response = await api.post('/createcolaborador', data)
+        const response = await api.post('/create', data)
       } catch (error) {
         console.log(error)
       }
