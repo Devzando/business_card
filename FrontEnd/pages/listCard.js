@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import QRCode from 'react-qr-code'
 import router from 'next/router'
 import Head from 'next/head'
 
@@ -32,6 +33,15 @@ export default function ListCard() {
         </Head>
         <div class="background-list d-flex justify-content-center align-items-center flex-column">
             <a class="voltar-list btn btn-warning" href="/"><i class="bi bi-arrow-left fs-1"></i></a>
+
+            <ul class="list-cards">
+                <li><a class="d-flex justify-content-center" href="/myCard" ><QRCode value="www.youtube.com"/></a><h1>David Almeida</h1></li>
+                <li><a class="d-flex justify-content-center" href="/myCard" ><img id="qr-code" src="qrcode.png" alt="QrCode" /></a><h1>Tomas Braz</h1></li>
+                <li><a class="d-flex justify-content-center" href="/myCard" ><img id="qr-code" src="qrcode.png" alt="QrCode" /></a><h1>José Gabriel</h1></li>
+                <li><a class="d-flex justify-content-center" href="/myCard" ><img id="qr-code" src="qrcode.png" alt="QrCode" /></a><h1>Mirosmar Santos</h1></li>
+                <li><a class="d-flex justify-content-center" href="/myCard" ><img id="qr-code" src="qrcode.png" alt="QrCode" /></a><h1>Fulaninho de Tal</h1></li>
+                <li><a class="d-flex justify-content-center" href="/myCard" ><img id="qr-code" src="qrcode.png" alt="QrCode" /></a><h1>Ciclano das Trax</h1></li>
+            </ul>
             {users.map(item => (
               <ul key={item.id} class="list-cards">
                   <li><a class="d-flex justify-content-center" href="/myCard" ><img id="qr-code" src="qrcode.png" alt="QrCode" /></a><h1>{item.nome}</h1></li>
