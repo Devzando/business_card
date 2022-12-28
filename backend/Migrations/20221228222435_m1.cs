@@ -19,7 +19,7 @@ namespace backend.Migrations
                     Nome = table.Column<string>(type: "TEXT", nullable: true),
                     Email = table.Column<string>(type: "TEXT", nullable: true),
                     Cargo = table.Column<string>(type: "TEXT", nullable: true),
-                    Url = table.Column<string>(type: "TEXT", nullable: true)
+                    Telefone = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {

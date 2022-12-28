@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export const api = axios.create({
-    baseURL: 'https://yarndevappbackend.azurewebsites.net'
+    baseURL: 'http://localhost:5055'
 })

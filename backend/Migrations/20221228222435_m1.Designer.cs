@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace backend.Migrations
 {
     [DbContext(typeof(BancoDeDados))]
-    [Migration("20221228161441_m1")]
+    [Migration("20221228222435_m1")]
     partial class m1
     {
         /// <inheritdoc />
@@ -33,7 +33,7 @@ namespace backend.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Url")
+                    b.Property<string>("Telefone")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
