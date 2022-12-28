@@ -1,0 +1,43 @@
+.backgroundMyCard {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(24, 42, 116, 0.5);
+}
+
+.voltar-list{
+    width: 70px;
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    border-radius: 100%;
+}
+
+.card img {
+    width: 16vw;
+    align-self: center;
+}
+
+.card{
+    background-color: #182A74;
+    box-shadow: rgb(24, 42, 116, 0.4) 5px 5px, rgba(24, 42, 116, 0.3) 10px 10px, rgba(24, 42, 116, 0.2) 15px 15px, rgba(24, 42, 116, 0.1) 20px 20px, rgba(24, 42, 116, 0.05) 25px 25px;
+}
+
+.card li{
+    color: white;
+}
+
+#Nome{
+    background-image: linear-gradient(#182A74, #0057FA);
+}
+
+#Cargo {
+    background-image: linear-gradient(#0057FA, #2E77FF);
+}
+
+#Email {
+    background-image: linear-gradient(#2E77FF, #5C95FF);
+}
+
+#Telefone {
+    background-image: linear-gradient(#5C95FF, #8FB6FF);
+}
