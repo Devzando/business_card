@@ -1,0 +1,45 @@
+.background-list{
+    width: 100%;
+    background-color: rgb(24, 42, 116, 0.5);
+}
+
+.list-cards{
+    list-style: none;
+}
+
+.list-cards li{
+    border-radius: 35px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding-left: 10vw;
+    padding-right: 5vw;
+    width: 50vw;
+    height: 25vh;
+    background-color: rgb(24, 42, 116);
+    font-size:xx-large;
+}
+
+.list-cards a {
+    width: 7vw;
+}
+
+.list-cards h1 {
+    width: 50vw;
+    text-align: center;
+}
+
+#qr-code{
+    width: 7vw;
+}
+
+.voltar-list{
+    width: 70px;
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    border-radius: 100%;
+}
