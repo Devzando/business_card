@@ -34,7 +34,7 @@ export default function ListCard() {
             <a class="voltar-list btn btn-warning" href="/"><i class="bi bi-arrow-left fs-1"></i></a>
 
             <ul class="list-cards">
-                <li><a class="d-flex justify-content-center" href="/myCard" ><QRCode value="www.youtube.com"/></a><h1>David Almeida</h1></li>
+                <li><a class="d-flex justify-content-center" href="/myCard" ><QRCode value=" 192.168.22.91:3000/myCard"/></a><h1>David Almeida</h1></li>
                 <li><a class="d-flex justify-content-center" href="/myCard" ><img id="qr-code" src="qrcode.png" alt="QrCode" /></a><h1>Tomas Braz</h1></li>
                 <li><a class="d-flex justify-content-center" href="/myCard" ><img id="qr-code" src="qrcode.png" alt="QrCode" /></a><h1>José Gabriel</h1></li>
                 <li><a class="d-flex justify-content-center" href="/myCard" ><img id="qr-code" src="qrcode.png" alt="QrCode" /></a><h1>Mirosmar Santos</h1></li>
