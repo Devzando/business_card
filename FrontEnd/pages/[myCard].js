@@ -37,17 +37,17 @@ export default function MyCard() {
 
             <a class="voltar-list btn btn-warning" href="/"><i class="bi bi-arrow-left fs-1"></i></a>
 
-            <div class="card h-75 w-25 text-light">
+            <div class="card text-light">
                 <img src="perfil.png" class="card-img-top" alt="Imagem do Perfil" />
                 <div class="card-body">
-                    <h5 class="card-title text-center fs-2">Informações do Cartão Virtual</h5>
+                    <h5 class="texto-titulo text-center">Informações do Cartão Virtual</h5>
                 </div>
                 {user.map(item => (
                     <ul key={item.id} class="list-group list-group-flush text-center">
-                        <li id="Nome" class="list-group-item p-3 fs-4">{item.nome}</li>
-                        <li id="Cargo" class="list-group-item p-3 fs-4">{item.cargo}</li>
-                        <li id="Email" class="list-group-item p-3 fs-4">{item.email}</li>
-                        <li id="Telefone" class="list-group-item p-3 fs-4">{item.telefone}</li>
+                        <li id="Nome" class="texto-corpo list-group-item p-3 fs-4">{item.nome}</li>
+                        <li id="Cargo" class="texto-corpo list-group-item p-3 fs-4">{item.cargo}</li>
+                        <li id="Email" class="texto-corpo list-group-item p-3 fs-4">{item.email}</li>
+                        <li id="Telefone" class="texto-corpo list-group-item p-3 fs-4">{item.telefone}</li>
                     </ul>
                 ))}
             </div>
