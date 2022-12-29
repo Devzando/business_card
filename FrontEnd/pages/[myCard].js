@@ -6,13 +6,14 @@ import { api } from '../services/api'
 export default function MyCard() {
     const [user, setUser] = useState([])
     const router = useRouter()
-
+    
     
     async function getColaborador(){
-        const {MyCard} = router.query
+        
         try {
-            const response = await api.get(`/getcolaborador/${MyCard}`)
-            setUser(response.data)
+            const {id} = router.query
+            const response = await api.get(`/getcolaborador/${id}`)
+            setUser([response.data])
         } catch (error) {
             console.log(error)
         }
@@ -20,7 +21,6 @@ export default function MyCard() {
 
     useEffect(() => {
         getColaborador()
-        console.log(user)
     }, [])
 
   return (
@@ -41,12 +41,14 @@ export default function MyCard() {
                 <div class="card-body">
                     <h5 class="card-title text-center fs-2">Informações do Cartão Virtual</h5>
                 </div>
-                <ul class="list-group list-group-flush text-center">
-                    <li id="Nome" class="list-group-item p-3 fs-4">Tomas Braz da Silva</li>
-                    <li id="Cargo" class="list-group-item p-3 fs-4">Desenvolvedor Frontend</li>
-                    <li id="Email" class="list-group-item p-3 fs-4">esquecatudo@gmail.com</li>
-                    <li id="Telefone" class="list-group-item p-3 fs-4">(81) 99999-9999</li>
-                </ul>
+                {user.map(item => (
+                    <ul key={item.id} class="list-group list-group-flush text-center">
+                        <li id="Nome" class="list-group-item p-3 fs-4">{item.nome}</li>
+                        <li id="Cargo" class="list-group-item p-3 fs-4">{item.cargo}</li>
+                        <li id="Email" class="list-group-item p-3 fs-4">{item.email}</li>
+                        <li id="Telefone" class="list-group-item p-3 fs-4">{item.telefone}</li>
+                    </ul>
+                ))}
             </div>
         </div>
     </>

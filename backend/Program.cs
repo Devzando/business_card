@@ -20,5 +20,12 @@ app.MapPost("/create", async (Colaborador colaborador, BancoDeDados bd) => {
     return Results.Ok(colaborador); 
 });
 
+app.MapDelete("/delete/{id}", async (int id, BancoDeDados bd) => {
+    Colaborador c = await bd.Colaboradores.FirstOrDefaultAsync(c => c.Id == id);
+    bd.Remove(c);
+    await bd.SaveChangesAsync();
+    return Results.Ok(c); 
+});
+
 app.UseCors("corspolicy");
 app.Run();
