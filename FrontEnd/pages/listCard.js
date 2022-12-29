@@ -36,7 +36,7 @@ export default function ListCard() {
 
             {users.map(item => (
               <ul key={item.id} class="list-cards">
-                  <li><Link class="d-flex justify-content-center" href={{pathname: "myCard", query: {id: item.id}}} ><QRCode value="/myCard/1"/></Link><h1>{item.nome}</h1></li>
+                  <li><Link class="d-flex justify-content-center" href={{pathname: "myCard", query: {id: item.id}}} ><QRCode value={`http://192.168.22.137:3000/myCard?id=${item.id}`} /></Link><h1>{item.nome}</h1></li>
               </ul>
             ))}
         </div>

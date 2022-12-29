@@ -12,6 +12,7 @@ export default function MyCard() {
         
         try {
             const {id} = router.query
+            console.log(id)
             const response = await api.get(`/getcolaborador/${id}`)
             setUser([response.data])
         } catch (error) {
