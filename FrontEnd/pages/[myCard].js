@@ -35,7 +35,7 @@ export default function MyCard() {
         </Head>
         <div class="backgroundMyCard d-flex justify-content-center align-items-center flex-column">
 
-            <a class="voltar-list btn btn-warning" href="/"><i class="bi bi-arrow-left fs-1"></i></a>
+            <a class="voltar-list btn btn-warning" href="/listCard"><i class="bi bi-arrow-left fs-1"></i></a>
 
             <div class="card text-light">
                 <img src="perfil.png" class="card-img-top" alt="Imagem do Perfil" />
